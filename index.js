@@ -1,7 +1,7 @@
 /// Open source shiba-bot
-/// This code is NOT allowed to be used to host your own copy of the bot.
+/// This code is NOT allowed to be used to host your own copy of the bot. (Read License.md)
 
-
+/// web framework, is required for repl.it hosting.
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -17,7 +17,9 @@ const config = require("./config.json");
 const rateLimit = require("express-rate-limit");
 
 
-//old activity code
+//old activity setting code
+/// may be used when I feel like it
+
 ///client.once('ready', () => {
   ///  console.log('Ready!');
   //  client.user.setActivity('2 Servers | s!help', { type: 'WATCHING'}).catch(console.error);
@@ -67,11 +69,11 @@ client.on("message", message => {
 });
 
 client.login(process.env.DISCORD_TOKEN);
-
+/// DDoS Protection, I don't exactly know how good this is, and I don't want to find out.
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, 
   max: 100 
 });
-
+/// I should move to cloudfare, seriously. (for hosting and protection.)
 app.use(limiter);
 
