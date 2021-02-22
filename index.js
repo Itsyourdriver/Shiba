@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('main.html'));
+app.get('/', (req, res) => res.send('main.html')); // was going to send you to the webpage, scrapped that
 
 app.listen(port, () => console.log(`localhost at http://localhost:${port}`));
 
