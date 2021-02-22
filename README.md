@@ -1,2 +1,26 @@
 # Shiba
-Public-Source
+Shiba is a multi-purpose discord bot which runs on discord.js. The premium code is not in this repository, as this is the public build.
+Many core files such as tokens, api links, and more will be missing.
+
+
+
+# License
+Shiba is licensed under the Attribution-NonCommercial 4.0 International
+More can be found in the license.md file. https://creativecommons.org/licenses/by-nc/4.0/
+
+
+
+# Website
+The websites code will be released soon, however It is still a work in progress. https://shiba.itsyourdriver.repl.co/
+
+
+# Hosting
+The bot is hosted with https://repl.it and https://uptimerobot.com/ 
+
+
+# Support Server
+You can get support with the bot here: https://discord.gg/KQe9GDBsrr
+
+
+# Premium Info
+The premium version of the bot will not be released publicly, as I'm waiting to figure out on how to setup said premium things, the bot needs to be fully finished first.
