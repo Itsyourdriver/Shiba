@@ -11,7 +11,7 @@ More can be found in the license.md file. https://creativecommons.org/licenses/b
 
 
 # Website
-The websites code will be released soon, however It is still a work in progress. https://shiba.itsyourdriver.repl.co/
+The websites code will be released soon, however It is still a work in progress. https://shibabot.ga/
 
 
 # Hosting
