@@ -24,3 +24,7 @@ You can get support with the bot here: https://discord.gg/Mtzw8RuxGp
 
 # Premium Info
 The premium version of the bot will not be released publicly, as I'm waiting to figure out on how to setup said premium things, the bot needs to be fully finished first.
+
+
+# The story behind the bot's name
+Originally, I made the bot being that I had a bunch of friends using shiba pfps, in which I joined in and at the time I wanted to make a utility bot. And that is what I did. 
