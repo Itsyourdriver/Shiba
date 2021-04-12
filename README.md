@@ -19,7 +19,7 @@ The bot is hosted with https://repl.it and https://uptimerobot.com/
 
 
 # Support Server
-You can get support with the bot here: https://discord.gg/KQe9GDBsrr
+You can get support with the bot here: https://discord.gg/Mtzw8RuxGp
 
 
 # Premium Info
