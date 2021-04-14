@@ -15,7 +15,7 @@ The websites code will be released soon, however It is still a work in progress.
 
 
 # Hosting
-The bot is hosted with https://repl.it and https://uptimerobot.com/ 
+The bot is hosted with https://repl.it and https://uptimerobot.com/ which will probably get moved to a VPS or to a node with an i5 4570 @ 3.20 Ghz and 16GB of ddr3 ram. (with only 6 being dedicated to the bot until it needs more)
 
 
 # Support Server
