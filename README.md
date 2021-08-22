@@ -1,4 +1,6 @@
 # Shiba
+This repo is currently un-updated but will be updated with all of the updated code soon.
+
 Shiba is a multi-purpose discord bot which runs on discord.js. The premium code is not in this repository, as this is the public build.
 Many core files such as tokens, api links, and more will be missing.
 
