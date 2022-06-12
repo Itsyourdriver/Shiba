@@ -8,10 +8,11 @@
   },
   "keywords": [],
   "author": "Itsyourdriver",
-  "license": "Attribution-NonCommercial 4.0 International", /// this will not work unless swapped out for another license, read license.md for full
+  "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1",
     "express": "^4.17.1",
-    "express-rate-limit": "^5.2.3"
+    "express-rate-limit": "^5.2.3",
+    "ms": "^2.1.3"
   }
 }
