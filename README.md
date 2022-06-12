@@ -31,4 +31,4 @@ Work-In-Progress
 Originally, I made the bot being that I had a bunch of friends using shiba pfps, in which I joined in and at the time I wanted to make a utility bot. And that is what I did. 
 
 
-[![Discord Bots](https://top.gg/api/widget/778751661245333577.svg)](https://top.gg/bot/778751661245333577)
+[![Discord Bots](https://top.gg/api/widget/778751661245333577.svg)(https://top.gg/bot/778751661245333577)
