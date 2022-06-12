@@ -1,48 +1,30 @@
-/// Open source shiba-bot
-/// This code is NOT allowed to be used to host your own copy of the bot. (Read License.md)
-
-/// web framework, is required for repl.it hosting.
+/// View license before using :-)
 const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('main.html')); // was going to send you to the webpage, scrapped that
+
+app.get('/', (req, res) => res.send('Ping!'));
 
 app.listen(port, () => console.log(`localhost at http://localhost:${port}`));
 
-
+const talkedRecently = new Set();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
-const rateLimit = require("express-rate-limit");
 
 
-//old activity setting code
-/// may be used when I feel like it
 
-///client.once('ready', () => {
-  ///  console.log('Ready!');
-  //  client.user.setActivity('2 Servers | s!help', { type: 'WATCHING'}).catch(console.error);
-//});
 
-//client.once('ready', () => {
-   // console.log('Ready!');
-   // setInterval(() => {
-   //     client.user.setActivity(client.guilds.cache.size + " Servers | s!help", {type: 'WATCHING'}).catch(console.error);
-    //}, 10000);
-//});
-///
+
+client.on('debug', console.log);
 
 client.once('ready', () => {
    console.log('Ready!');
-   setInterval(() => {
-   client.user.setActivity(client.guilds.cache.size + " Servers | s!help", {
-  type: "STREAMING",
-  url: "https://www.twitch.tv/itsyourdriver_"})
-.catch(console.error);
-    }, 10000);
+   console.log(client.guilds.cache.size);
+   client.user.setActivity(client.guilds.cache.size + " Servers | s!help | shiba.ga", {
+  type: "PLAYING"}).catch(console.error);
 });
-
 
 client.commands = new Discord.Collection()
 const fs = require("fs")
@@ -55,25 +37,29 @@ fs.readdir("./Commands/", (error, files) => {
     });
 });
 
-
 client.on("message", message => {
     if (message.author.bot) return;
     if (message.channel.type === "dm") return;
     if (!message.content.startsWith(config.prefix)) return;
+   if (talkedRecently.has(message.author.id)) {
+            message.reply("Wait 3 seconds before running a command again");
+    } else {
+    
     const args = message.content.slice(config.prefix.length).split(" ")
     const command = args.shift()
     const cmd = client.commands.get(command)
-    if (cmd) {
+    if (cmd) { 
         cmd.run(client, message, args)
     } else return;
+         
+        talkedRecently.add(message.author.id);
+        setTimeout(() => {
+          talkedRecently.delete(message.author.id);
+        }, 3000);
+    }
+  
 });
+
+
 
 client.login(process.env.DISCORD_TOKEN);
-/// DDoS Protection, I don't exactly know how good this is, and I don't want to find out.
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, 
-  max: 100 
-});
-/// I should move to cloudfare, seriously. (for hosting and protection.)
-app.use(limiter);
-
