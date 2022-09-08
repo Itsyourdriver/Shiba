@@ -22,8 +22,12 @@ The bot is hosted with https://replit.com
 You can get support with the bot here: https://discord.io/shiba-support
 
 
-# Premium Info
-Not coming, sorry :)
+# Contributing
+Are you looking to contribute to the bot?
+Well, you are in the right place.
+Create a PR of your own changes or a currently open suggestion such as #7 & #5.
+I will approve/disapprove your changes with things I want you to do, 
+If your changes are added to the bot, you will be credited AND added into a command in the bot.
 
 
 # The Story Of The Bot
