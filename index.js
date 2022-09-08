@@ -1,9 +1,11 @@
-/// View license before using :-)
+/// Read license before using, thank you :)
+
+
 const express = require('express');
 const app = express();
 const port = 3000;
 
-
+/// webserver for a backup keepalive due to hosting
 app.get('/', (req, res) => res.send('Ping!'));
 
 app.listen(port, () => console.log(`localhost at http://localhost:${port}`));
@@ -23,7 +25,7 @@ client.once('ready', () => {
    console.log('Ready!');
    console.log(client.guilds.cache.size);
    client.user.setActivity(client.guilds.cache.size + " Servers | s!help | shiba.ga", {
-  type: "PLAYING"}).catch(console.error);
+  type: "WATCHING"}).catch(console.error);
 });
 
 client.commands = new Discord.Collection()
@@ -42,7 +44,7 @@ client.on("message", message => {
     if (message.channel.type === "dm") return;
     if (!message.content.startsWith(config.prefix)) return;
    if (talkedRecently.has(message.author.id)) {
-            message.reply("Wait 3 seconds before running a command again");
+            message.reply("Wait 4 seconds before running a command again (The time has been increased to attempt to fix ratelimiting issues, we are very sorry for any issues this may cause.)");
     } else {
     
     const args = message.content.slice(config.prefix.length).split(" ")
@@ -55,7 +57,7 @@ client.on("message", message => {
         talkedRecently.add(message.author.id);
         setTimeout(() => {
           talkedRecently.delete(message.author.id);
-        }, 3000);
+        }, 4000);
     }
   
 });
