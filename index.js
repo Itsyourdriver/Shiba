@@ -1,6 +1,5 @@
 /// Read license before using, thank you :)
 
-
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -35,15 +34,6 @@ client.on(`presenceUpdate`,(member)=>{
 })
 
 
-function checkStatus() {
-    if (client.users.fetch(botID).presence.status === "offline" ) {
-   return true;
-} else {
-   return false;
-}
-}
-
-client.setInterval(() => checkPing(), 300000);
 
 
 client.commands = new Discord.Collection()
@@ -83,7 +73,7 @@ client.on("message", message => {
 
 
 client.login(process.env.DISCORD_TOKEN);
-/// code if it works I'll use to keep statuspage working :D
+/// random code for later
 ////  app.close((err) => {
   ///console.log('server closed')
   ///app.exit(err ? 1 : 0)
