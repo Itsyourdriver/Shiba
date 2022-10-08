@@ -20,7 +20,9 @@ The bot is hosted with https://replit.com
 
 # Support Server
 You can get support with the bot here: https://discord.io/shiba-support
+
 If you are looking for the bot status if it is down, check here: https://shiba-status.statuspage.io/
+
 If you are looking for the website status if it is down, check here: https://stats.uptimerobot.com/y7w9Di7Zzw
 
 # Contributing
