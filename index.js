@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-/// webserver for a backup keepalive due to hosting
+
 app.get('/', (req, res) => res.send('Ping!'));
 
 app.listen(port, () => console.log(`localhost at http://localhost:${port}`));
@@ -24,9 +24,27 @@ client.on('debug', console.log);
 client.once('ready', () => {
    console.log('Ready!');
    console.log(client.guilds.cache.size);
-   client.user.setActivity(client.guilds.cache.size + " Servers | s!help | shiba.ga", {
+  client.user.setActivity(client.guilds.cache.size + " Servers | shiba.ga | Shard 0", {
+//   client.user.setActivity(client.guilds.cache.size + " Servers | s!help ", {
   type: "WATCHING"}).catch(console.error);
 });
+
+client.on(`presenceUpdate`,(member)=>{
+    console.log(`${member.user.username} has updated their presence.`)
+
+})
+
+
+function checkStatus() {
+    if (client.users.fetch(botID).presence.status === "offline" ) {
+   return true;
+} else {
+   return false;
+}
+}
+
+client.setInterval(() => checkPing(), 300000);
+
 
 client.commands = new Discord.Collection()
 const fs = require("fs")
@@ -65,3 +83,8 @@ client.on("message", message => {
 
 
 client.login(process.env.DISCORD_TOKEN);
+/// code if it works I'll use to keep statuspage working :D
+////  app.close((err) => {
+  ///console.log('server closed')
+  ///app.exit(err ? 1 : 0)
+///})
