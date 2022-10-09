@@ -11,7 +11,7 @@ More can be found in the license.md file. https://creativecommons.org/licenses/b
 
 
 # Website
-The websites code will be released soon, however It is still a work in progress and was not made by me. Credit is at the bottom and I will likely fork the original project I used and fill in my code:  https://shiba.ga/
+https://github.com/Itsyourdriver/shiba-html or https://shiba.ga/
 
 
 # Hosting
