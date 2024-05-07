@@ -1,8 +1,8 @@
 # Shiba
 A Multi-use discord bot ready to improve your server.
-This repo is updated monthtly (if any edits are made)
 
 
+# Notice: This repo has not been updated in a while, slash commands have not been pushed here. The only thing I am doing at the current moment is keeping the bot up.
 
 # License
 Shiba is licensed under the Attribution-NonCommercial 4.0 International
